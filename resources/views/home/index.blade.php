@@ -1,13 +1,21 @@
 @extends('layout.main')
 
+@section('page_id', 'home')
 @section('content')
 
-    <div class="header">Header</div>
-    <div class="hero">Hero</div>
-    <div class="benefits">Benefits</div>
-    <div class="testimonals">testimonials</div>
-    <div class="cta">cta</div>
-    <div class="contact">contact</div>
-    <div class="footer">footer</div>
+    {{-- Hero --}}
+    @include('home.hero')
+
+    {{-- Benefits --}}
+    @include('home.benefits')
+
+    {{-- Testimonials --}}
+    @include('home.testimonials')
+
+    {{-- CTA --}}
+    @include('home.cta')
+
+    {{-- Contact --}}
+    @include('home.contact')
 
 @endsection

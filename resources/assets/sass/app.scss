@@ -1,9 +1,19 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,400,400i,600,700,800,900');
 
 // Variables
-@import "variables";
+@import 'variables';
 
 // Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'buttons';
+
+// Layout
+@import 'layout';
+
+// Pages
+@import 'home';
+
+// Components
+@import 'demonstration';
