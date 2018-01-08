@@ -1,5 +1,5 @@
 .demo {
-    padding: 50px 0;
+    padding: 30px 0;
     text-align: center;
     font-size: 20px;
     font-weight: 300;
@@ -29,6 +29,8 @@
         margin: 50px auto 0;
 
         .form-group {
+            margin-bottom: 5px;
+
             &:not(.has-error) {
                 .form-control {
                     border: 1px solid #e3e3e3;
@@ -52,8 +54,8 @@
         }
 
         .form-control {
-            height: 50px;
-            line-height: 50px;
+            height: 45px;
+            line-height: 45px;
             box-shadow: none;
             font-size: 18px;
             font-weight: 300;
@@ -69,6 +71,12 @@
             display: block;
             margin: 45px auto 0;
             padding: 0 25px;
+        }
+
+        .text-danger {
+            font-size: 14px;
+            display: block;
+            margin-top: 5px;
         }
 
         small {

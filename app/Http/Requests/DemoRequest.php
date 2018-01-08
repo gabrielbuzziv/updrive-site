@@ -25,10 +25,11 @@ class DemoRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'    => 'required',
-            'email'   => 'required|email',
-            'phone'   => 'required',
-            'company' => 'required'
+            'name'                 => 'required',
+            'email'                => 'required|email',
+            'phone'                => 'required',
+            'company'              => 'required',
+            'g-recaptcha-response' => 'required|captcha'
         ];
     }
 
@@ -40,9 +41,9 @@ class DemoRequest extends FormRequest
     public function attributes()
     {
         return [
-            'name' => 'nome',
-            'email' => 'e-mail',
-            'phone' => 'telefone',
+            'name'    => 'nome',
+            'email'   => 'e-mail',
+            'phone'   => 'telefone',
             'company' => 'empresa'
         ];
     }

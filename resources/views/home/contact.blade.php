@@ -51,6 +51,11 @@
                         <span class="text-danger">{{ $errors->first('message') }}</span>
                     </div>
 
+                    <div class="form-group {{ $errors->has('g-recaptcha-response') ? 'has-error' : '' }}">
+                        {!! NoCaptcha::display() !!}
+                        <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+                    </div>
+
                     <button class="btn btn-primary btn-rounded" type="submit">
                         Enviar
                     </button>

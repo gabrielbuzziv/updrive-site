@@ -7,7 +7,6 @@
             <h2>Experimente o UP Drive</h2>
 
             <p>
-                <b>Quem não gostaria de dar uma olhada na casa antes de chamá-la de lar?</b><br>
                 Gostariamos de deixá-lo <b>experimentar</b> nossa ferramenta durante <b>30 dias</b>, respondendo suas dúvidas e ajudando a entender
                 porque o UP Drive é <b>ideal para sua empresa</b>.
             </p>
@@ -40,10 +39,17 @@
                     <span class="text-danger">{{ $errors->first('company') }}</span>
                 </div>
 
+                <div class="form-group margin-top-15 margin-bottom-20 {{ $errors->has('g-recaptcha-response') ? 'has-error' : '' }}">
+                    {!! NoCaptcha::display() !!}
+                    <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+                </div>
+
                 <small>
                     Solicitar uma demonstração adicionará você em nossa lista de e-mails.
                     Você poderá se desinscrever a qualquer momento.
                 </small>
+
+
 
                 <button class="btn btn-primary">
                     Solicitar Agora

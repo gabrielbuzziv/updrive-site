@@ -29,6 +29,7 @@
     </div>
 
     <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+    {!! NoCaptcha::renderJs() !!}
 </body>
 
 </html>
