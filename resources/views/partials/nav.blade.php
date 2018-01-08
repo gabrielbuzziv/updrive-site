@@ -12,12 +12,12 @@
 
             <div class="pull-right">
                 <ul class="nav-menu">
-                    <li>
-                        <a href="#">Como funciona?</a>
-                    </li>
+                    {{--<li>--}}
+                        {{--<a href="#">Como funciona?</a>--}}
+                    {{--</li>--}}
 
                     <li>
-                        <a href="#">Contato</a>
+                        <a href="#contato">Contato</a>
                     </li>
                 </ul>
 

@@ -3,8 +3,8 @@
         <h2>Tão simples quanto enviar e-mails</h2>
 
         <p>
-            Livre-se de confirmações de e-mail, planilhas de entregas e da desculpa de que seu cliente
-            não recebeu seus documentos. O UP Drive faz todo o trabalho por você, não importa onde esteja.
+            Acompanhe em tempo real os documentos que você enviou aos clientes.<br>
+            Todas as documentações entregues até a data do vencimento.
         </p>
 
         <a href="{{ action('DemoController@index') }}" class="btn btn-success btn-rounded">
