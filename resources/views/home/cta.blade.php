@@ -7,8 +7,8 @@
             Junte-se a nós hoje.
         </p>
 
-        <button class="btn btn-success btn-rounded">
+        <a href="{{ action('DemoController@index') }}" class="btn btn-success btn-rounded">
             Solicitar Demonstração
-        </button>
+        </a>
     </div>
 </div>

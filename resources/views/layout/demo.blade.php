@@ -13,9 +13,19 @@
 
 <body id="@yield('page_id')">
     <div id="app">
-        @include('partials.nav')
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <h1>
+                        <a href="{{ action('HomeController@index') }}">
+                            <img src="/images/logo.png" alt="">
+                        </a>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
         @yield('content')
-        @include('partials.footer')
     </div>
 
     <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>

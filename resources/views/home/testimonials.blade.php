@@ -5,7 +5,7 @@
         <div class="testimonials-wrap">
             <div class="testimonial">
                 <header>
-                    <h5>ACME Ltda.</h5>
+                    <h5>Crescer Contabilidade</h5>
 
                     <blockquote>
                         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam aspernatur
@@ -14,7 +14,7 @@
 
                         <footer>
                             <cite>
-                                John Doe, Diretor da Crescer Contabilidade
+                                Eloi Venturi, Diretor da Crescer Contabilidade
                             </cite>
                         </footer>
                     </blockquote>
@@ -27,13 +27,13 @@
                     <a href="#"></a>
                 </li>
 
-                <li>
-                    <a href="#"></a>
-                </li>
+                {{--<li>--}}
+                    {{--<a href="#"></a>--}}
+                {{--</li>--}}
 
-                <li>
-                    <a href="#"></a>
-                </li>
+                {{--<li>--}}
+                    {{--<a href="#"></a>--}}
+                {{--</li>--}}
             </ul>
 
         </div>

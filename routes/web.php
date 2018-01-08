@@ -11,4 +11,14 @@
 |
 */
 
+/**
+ * HomeController
+ */
 Route::get('/', 'HomeController@index');
+Route::post('/enviar', 'HomeController@sendMail');
+
+/**
+ * DemoController
+ */
+Route::get('solicitar-demonstracao', 'DemoController@index');
+Route::post('solicitar-demonstracao', 'DemoController@request');

@@ -10,10 +10,10 @@
     @include('home.benefits')
 
     {{-- Testimonials --}}
-    @include('home.testimonials')
+{{--    @include('home.testimonials')--}}
 
     {{-- CTA --}}
-    @include('home.cta')
+{{--    @include('home.cta')--}}
 
     {{-- Contact --}}
     @include('home.contact')

@@ -4,6 +4,7 @@
 
 // Variables
 @import 'variables';
+@import 'helpers';
 
 // Bootstrap
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
@@ -16,4 +17,5 @@
 @import 'home';
 
 // Components
+@import 'loading';
 @import 'demonstration';

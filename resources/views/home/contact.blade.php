@@ -1,4 +1,4 @@
-<div class="contact">
+<div class="contact" id="contato">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -22,22 +22,36 @@
             </div>
 
             <div class="col-md-8">
-                <form action="" method>
+                @if (session('status'))
+                    <div class="alert alert-success">
+                        Sua mensagem foi enviada com sucesso, retornaremos o mais breve possível :)
+                    </div>
+                @endif
+
+                <form action="{{ action('HomeController@sendMail') }}#contato" method="POST">
+                    <input type="hidden" name="_method" value="post">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
                     <div class="row">
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" placeholder="Seu nome">
+                        <div class="form-group col-md-6 {{ $errors->has('name') ? 'has-error' : '' }}">
+                            <input type="text" name="name" class="form-control" value="{{ old('name') }}" placeholder="Seu nome">
+                            <span class="text-danger">{{ $errors->first('name') }}</span>
                         </div>
 
-                        <div class="form-group col-md-6">
-                            <input type="text" class="form-control" placeholder="Seu e-mail">
+                        <div class="form-group col-md-6 {{ $errors->has('email') ? 'has-error' : '' }}">
+                            <input type="text" name="email" class="form-control" value="{{ old('email') }}" placeholder="Seu e-mail">
+                            <span class="text-danger">{{ $errors->first('email') }}</span>
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <textarea class="form-control" rows="5" placeholder="Sua mensagem"></textarea>
+                    <div class="form-group {{ $errors->has('message') ? 'has-error' : '' }}">
+                        <textarea name="message" class="form-control" rows="5" placeholder="Sua mensagem">
+                            {{ old('message') }}
+                        </textarea>
+                        <span class="text-danger">{{ $errors->first('message') }}</span>
                     </div>
 
-                    <button class="btn btn-primary btn-rounded">
+                    <button class="btn btn-primary btn-rounded" type="submit">
                         Enviar
                     </button>
                 </form>
