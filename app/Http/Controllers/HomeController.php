@@ -17,7 +17,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $title = 'Rastreamento de documentos';
+        $title = 'Tão simples quanto enviar e-mails';
 
         return view('home.index', compact('title'));
     }
