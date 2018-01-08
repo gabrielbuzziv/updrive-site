@@ -46,48 +46,48 @@ class DemoController extends Controller
     public function request(DemoRequest $request)
     {
         // Add Organization
-//        $organization = $this->sendRequest('organizations', ['name' => $request->get('company')]);
-//        $organization = json_decode($organization);
-//
-//        // Add Person
-//        $person = $this->sendRequest('persons', [
-//            'name'   => $request->get('name'),
-//            'email'  => $request->get('email'),
-//            'phone'  => $request->get('phone'),
-//            'org_id' => $organization->data->id,
-//        ]);
-//        $person = json_decode($person);
-//
-//        // Add Deal
-//        $deal = $this->sendRequest('deals', [
-//            'title'     => "Negócio {$request->get('company')}",
-//            'org_id'    => $organization->data->id,
-//            'person_id' => $person->data->id,
-//            'stage_id'  => 10
-//        ]);
-//        $deal = json_decode($deal);
-//
-//        // Add Activity
-//        $activity = $this->sendRequest('activities', [
-//            'subject'  => 'Retornar Contato',
-//            'done'     => 0,
-//            'type'     => 'call',
-//            'due_date' => Carbon::now()->format('Y-m-d'),
-//            'due_time' => Carbon::now()->addMinutes(30)->format('H:i'),
-//            'duration' => '00:15',
-//            'deal_id'  => $deal->data->id,
-//            'note'     => 'Solicitou teste do UP Drive através da landing page.'
-//        ]);
-//        $activity = json_decode($activity);
-//
-//        // Add note in organization
-//        $note = $this->sendRequest('notes', [
-//            'content'   => 'Teste solicitado através da landing page.',
-//            'deal_id'   => $deal->data->id,
-//            'org_id'    => $organization->data->id,
-//            'person_id' => $person->data->id,
-//        ]);
-//        $note = json_decode($note);
+        $organization = $this->sendRequest('organizations', ['name' => $request->get('company')]);
+        $organization = json_decode($organization);
+
+        // Add Person
+        $person = $this->sendRequest('persons', [
+            'name'   => $request->get('name'),
+            'email'  => $request->get('email'),
+            'phone'  => $request->get('phone'),
+            'org_id' => $organization->data->id,
+        ]);
+        $person = json_decode($person);
+
+        // Add Deal
+        $deal = $this->sendRequest('deals', [
+            'title'     => "Negócio {$request->get('company')}",
+            'org_id'    => $organization->data->id,
+            'person_id' => $person->data->id,
+            'stage_id'  => 10
+        ]);
+        $deal = json_decode($deal);
+
+        // Add Activity
+        $activity = $this->sendRequest('activities', [
+            'subject'  => 'Retornar Contato',
+            'done'     => 0,
+            'type'     => 'call',
+            'due_date' => Carbon::now()->format('Y-m-d'),
+            'due_time' => Carbon::now()->addMinutes(30)->format('H:i'),
+            'duration' => '00:15',
+            'deal_id'  => $deal->data->id,
+            'note'     => 'Solicitou teste do UP Drive através da landing page.'
+        ]);
+        $activity = json_decode($activity);
+
+        // Add note in organization
+        $note = $this->sendRequest('notes', [
+            'content'   => 'Teste solicitado através da landing page.',
+            'deal_id'   => $deal->data->id,
+            'org_id'    => $organization->data->id,
+            'person_id' => $person->data->id,
+        ]);
+        $note = json_decode($note);
 
         $user = User::first();
         $user->notify(new DemoRequestedNotification($deal->data->id));
