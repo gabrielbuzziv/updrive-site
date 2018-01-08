@@ -28,7 +28,7 @@ class HomeController extends Controller
      */
     public function sendMail(ContactRequest $request)
     {
-        Mail::to('gabriel@updrive.com.br')
+        Mail::to('contato@updrive.com.br')
             ->send(new ContactMail($request->get('name'), $request->get('email'), $request->get('message')));
 
         return redirect()
